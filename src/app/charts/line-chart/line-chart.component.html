@@ -1,9 +1,9 @@
 
 <div class="main"> 
   <mat-card fxFlex="100%">
-    <h2>{{lineData.title}}</h2>
+    <h2><span>{{lineData.title}}</span></h2>
     <div fxLayout="row" fxLayout.xs="column" class="row">
-      <div fxFlex="25%" fxFlex.xs="100%" layout="column" class="mat-cloumn">
+      <div layout="column" class="mat-cloumn w-25">
         <mat-form-field appearance="fill">
           <mat-label>Location</mat-label>
           <mat-select multiple class="user-control">
@@ -12,7 +12,7 @@
         </mat-form-field>
       </div>
   
-      <div fxFlex="25%" fxFlex.xs="100%" layout="column" class="mat-cloumn">
+      <div layout="column" class="mat-cloumn w-25">
         <mat-form-field appearance="fill">
           <mat-label>View</mat-label>
           <mat-select class="user-control" (selectionChange)="viewSelectedVal(view.value)" #view>
@@ -23,7 +23,7 @@
         </mat-form-field>
       </div>
   
-      <div fxFlex="25%" fxFlex.xs="100%" layout="column" class="mat-cloumn" *ngIf="(viewSelected == 'w')">
+      <div layout="column" class="mat-cloumn w-25"*ngIf="(viewSelected == 'w')">
         <mat-form-field appearance="fill">
           <mat-label>Range</mat-label>       
           <input matInput [matDatepicker]="range">
@@ -32,7 +32,7 @@
         </mat-form-field>
       </div>
   
-      <div fxFlex="25%" fxFlex.xs="100%" layout="column" class="mat-cloumn" *ngIf="(viewSelected == 'm')">
+      <div layout="column" class="mat-cloumn w-25" *ngIf="(viewSelected == 'm')">
         <mat-form-field appearance="fill">
           <mat-label>Range</mat-label>       
             <mat-select class="user-control">
@@ -41,7 +41,7 @@
         </mat-form-field>
       </div>
   
-      <div fxFlex="25%" fxFlex.xs="100%" layout="column" class="mat-cloumn" *ngIf="(viewSelected == 'y')">
+      <div layout="column" class="mat-cloumn w-25" *ngIf="(viewSelected == 'y')">
         <mat-form-field appearance="fill">
           <mat-label>Range</mat-label>       
             <mat-select class="user-control">
@@ -50,7 +50,7 @@
         </mat-form-field>
       </div>
   
-      <div fxFlex="25%" fxFlex.xs="100%" layout="column" class="mat-cloumn" *ngIf="(viewSelected == 'w')">
+      <div layout="column" class="mat-cloumn w-25" *ngIf="(viewSelected == 'w')">
         <mat-form-field appearance="fill">
           <mat-label>Compare</mat-label>       
           <input matInput [matDatepicker]="compare">
@@ -59,7 +59,7 @@
         </mat-form-field>
       </div>
   
-      <div fxFlex="25%" fxFlex.xs="100%" layout="column" class="mat-cloumn" *ngIf="(viewSelected == 'm')">
+      <div layout="column" class="mat-cloumn w-25" *ngIf="(viewSelected == 'm')">
         <mat-form-field appearance="fill">
           <mat-label>Compare</mat-label>       
             <mat-select class="user-control">
@@ -68,7 +68,7 @@
         </mat-form-field>
       </div>
   
-      <div fxFlex="25%" fxFlex.xs="100%" layout="column" class="mat-cloumn" *ngIf="(viewSelected == 'y')">
+      <div layout="column" class="mat-cloumn w-25" *ngIf="(viewSelected == 'y')">
         <mat-form-field appearance="fill">
           <mat-label>Compare</mat-label>       
             <mat-select class="user-control">

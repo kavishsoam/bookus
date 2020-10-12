@@ -1,0 +1,390 @@
+.border-out {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 6px;
+  margin-bottom: 10px;
+}
+
+#lineChart {
+  font-size: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+.amcharts-amexport-item {
+  border: 0.5px solid #777;
+  background-color: wheat;
+}
+
+#pieChartFirst {
+  font-size: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+#pieChartFirst1 {
+  font-size: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+#pieChartFirst2 {
+  font-size: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+#pieChartFirst3 {
+  font-size: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+#plotPayment {
+  font-size: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+#plotProfits {
+  font-size: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+#allNewChart {
+  font-size: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.copy_demo {
+  font-size: 18px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #6794dc;
+  text-align: center;
+}
+
+.diff_demo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6794dc;
+  text-align: left;
+}
+
+.copy_demo1 {
+  text-align: center;
+}
+
+.new_demo {
+  font-size: 18px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #6794dc;
+  text-align: center;
+  margin: 0 !important;
+}
+
+.new_demo1 {
+  text-align: center;
+  margin-bottom: 0 !important;
+}
+
+.border-layout {
+  border-width: 1px;
+  border-style: dotted;
+  border-bottom: 0px;
+  border-top: 0px;
+  border-right: 0px;
+}
+
+.row {
+  display: flex;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-20 {
+  width: 20%;
+  float: left;
+}
+
+.w-40 {
+  width: 40%;
+  float: left;
+}
+
+.w-60 {
+  width: 60%;
+  float: left;
+}
+
+.w-50 {
+  width: 50%;
+  float: left;
+}
+
+.w-32 {
+  width: 32%;
+  float: left;
+}
+
+.w-80 {
+  width: 80%;
+  float: left;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.2w-50 {
+  width: 40%;
+}
+
+.section-piechart {
+  margin: 0 20px 20px 20px;
+}
+
+.graph-legend div {
+  text-align: center;
+}
+
+.graph-legend div p {
+  text-align: center;
+}
+
+.gender-section {
+  margin: 0 20px 20px 20px;
+}
+
+.average-watch-time {
+  margin: 0 20px 20px 20px;
+}
+
+.symbol-table {
+  min-height: 523px;
+}
+
+.sales-chart {
+  margin: 0 20px 20px 20px;
+}
+
+.marketing-chart {
+  margin: 0 20px 20px 20px;
+}
+
+.border-right {
+  border-right: 1px solid #777;
+}
+
+.heading {
+  width: 100%;
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.rating-section h2 {
+  text-align: center;
+  color: #3f7fb5;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.ratin-detail ul {
+  padding-left: 0;
+}
+
+.ratin-detail ul li {
+  list-style-type: none;
+}
+
+.rating-user-detail h3 {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.rating-user-detail h3 span {
+  float: right;
+}
+
+.rating-user-detail h3 span button.sort-button {
+  padding: 3px 9px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.rating-user-detail h4 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.rating-user-detail h4 .user-char {
+  font-size: 14px;
+  background: #419006;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 4px 9px;
+}
+
+.rating-user-detail .user-rating span {
+  color: #3f7fb5;
+}
+
+.rating-user-detail p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.show-more-btn {
+  margin: 20px 0;
+}
+
+.show-more-btn a {
+  background: #3f7fb5;
+  color: #fff;
+  float: left;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  padding: 3px 0;
+  border-radius: 2px;
+}
+
+.mat-card {
+  box-shadow: 0 0 0 #fff !important;
+}
+
+.sort-btn {
+  float: right;
+  padding: 3px 9px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.therapist-detail {
+  margin-top: 20px;
+  border-bottom: 1px solid #999;
+  padding: 8px 0;
+}
+
+.therapist-img {
+  width: 20%;
+  float: left;
+}
+
+.therapist-img img {
+  background: #eee;
+  padding: 10px 10px;
+  border-radius: 50%;
+}
+
+.therapist-name {
+  width: 50%;
+  float: left;
+}
+
+.therapist-name p {
+  margin: 0;
+}
+
+.therapist-name h3 {
+  margin: 0;
+}
+
+.therapist-name h3 span {
+  font-size: 13px;
+  color: #3f7fb5;
+}
+
+.therapist-name h4 {
+  color: #777;
+  font-size: 12px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.therapist-award {
+  width: 20%;
+  float: left;
+}
+
+@media (max-width: 991px) {
+  .rating-section h2 {
+    font-size: 19px;
+  }
+  .rating-section h2 span {
+    font-size: 10px;
+  }
+  .rating-user-detail {
+    font-size: 14px;
+  }
+  .mat-card {
+    padding: 0 !important;
+  }
+  .therapist-img img {
+    max-width: 13px;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 767px) {
+  .row {
+    display: block;
+  }
+  .w-60 {
+    width: 80%;
+  }
+  .w-40 {
+    width: 85%;
+  }
+  .w-32 {
+    width: 80%;
+  }
+  .w-50 {
+    width: 97%;
+  }
+  .sales-chart {
+    margin: 0 0 20px 0;
+  }
+  .marketing-chart {
+    margin: 0 0 20px 0;
+  }
+  .section-piechart {
+    margin: 0 0 20px 0;
+  }
+  .gender-section {
+    margin: 0 0 20px 10px;
+  }
+  .mobile-size {
+    font-size: 12px;
+  }
+  .average-watch-time {
+    width: 80%;
+    margin: 0 0 20px 0;
+  }
+  table {
+    width: 100%;
+  }
+  table tr th, table tr td {
+    padding: 0;
+  }
+}
