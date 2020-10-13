@@ -37,7 +37,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 interface Food {
-  value: string;
+  value: number;
   viewValue: string;
 }
 @Component({
@@ -76,19 +76,24 @@ interface Food {
       ]
     }
 
-
+    months:any = ['January','Febraury','March','April','May','Jun','July','August','September','October','November','December'];
+    years:any = ['2020','2019','2018','2017','2016'];
+    viewSelected:string = 'w';
 
     constructor() {}
     toppings = new FormControl();
-    toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+    toppingList = [{value:'All',id:1}, {value:'Store-1',id:2}, {value:'Store-2',id:3}];
     foods: Food[] = [
-      {value: 'steak-0', viewValue: 'Steak'},
-      {value: 'pizza-1', viewValue: 'Pizza'},
-      {value: 'tacos-2', viewValue: 'Tacos'}
+      {value: 1, viewValue: 'Monthly'},
+      {value: 2, viewValue: 'Weekly'},
+      {value: 3, viewValue: 'Yearly'}
     ];
+    drawerItalyValue:any = '42,977'
+    drawerGermanyValue:any = '64,007'
+    drawerUkValue:any = '123,007'
     ngOnInit() {
-      this.plotLineChart();
-      this.plotPieFirstChart();
+      this.plotLineChart(1);
+      this.plotPieFirstChart(1);
       this.plotPieFirstChart1();
       this.plotPieFirstChart2();
       this.plotPieFirstChart3();
@@ -96,7 +101,7 @@ interface Food {
       this.plotProfitMethods();
     }
 
-    plotLineChart() {
+    plotLineChart(val) {
       am4core.useTheme(am4themes_spirited);
       am4core.useTheme(am4themes_animated);
       // Themes end
@@ -105,53 +110,81 @@ interface Food {
       let chart = am4core.create("lineChart", am4charts.XYChart);
       
       // Add data
-      chart.data = [{
-        "year": "Sep 1st 2020",
-        "italy": 10,
-        "germany": 55,
-        "uk": 300
-      }, {
-        "year": "Sep 3rd 2020",
-        "italy": 100,
-        "germany": 200,
-        "uk": 60
-      }, {
-        "year": "Sep 5th 2020",
-        "italy": 20,
-        "germany": 300,
-        "uk": 120
-      }, {
-        "year": "Sep 7th 2020",
-        "italy": 310,
-        "germany": 140,
-        "uk": 210
-      }, {
-        "year": "Sep 13th 2020",
-        "italy": 50,
-        "germany": 100,
-        "uk": 200
-      }, {
-        "year": "Sep 15th 2020",
-        "italy": 30,
-        "germany": 200,
-        "uk": 150
-      }, {
-        "year": "Sep 19th 2020",
-        "italy": 160,
-        "germany": 210,
-        "uk": 390
-      }, {
-        "year": "Sep 23rd 2020",
-        "italy": 210,
-        "germany": 100,
-        "uk": 500
-      }, {
-        "year": "Sep 30th 2020",
-        "italy": 310,
-        "germany": 570,
-        "uk": 200
-      }];
-      
+      if(val == 1){
+        chart.data = [{
+          "year": "Sep 1st 2020",
+          "italy": 10,
+          "germany": 55,
+          "uk": 300
+        }, {
+          "year": "Sep 3rd 2020",
+          "italy": 100,
+          "germany": 200,
+          "uk": 60
+        }, {
+          "year": "Sep 5th 2020",
+          "italy": 20,
+          "germany": 300,
+          "uk": 120
+        }, {
+          "year": "Sep 7th 2020",
+          "italy": 310,
+          "germany": 140,
+          "uk": 210
+        }, {
+          "year": "Sep 13th 2020",
+          "italy": 50,
+          "germany": 100,
+          "uk": 200
+        }, {
+          "year": "Sep 15th 2020",
+          "italy": 30,
+          "germany": 200,
+          "uk": 150
+        }, {
+          "year": "Sep 19th 2020",
+          "italy": 160,
+          "germany": 210,
+          "uk": 390
+        }, {
+          "year": "Sep 23rd 2020",
+          "italy": 210,
+          "germany": 100,
+          "uk": 500
+        }, {
+          "year": "Sep 30th 2020",
+          "italy": 310,
+          "germany": 570,
+          "uk": 200
+        }];
+          
+      }else if(val ==2) {
+        chart.data =[{
+          
+          "year": "Sep 23rd 2020",
+          "italy": 210,
+          "germany": 100,
+          "uk": 500
+        }, {
+          "year": "Sep 30th 2020",
+          "italy": 310,
+          "germany": 570,
+          "uk": 200
+        }]
+      } else if(val ==3)
+      {
+        chart.data = [{
+          "year": "Sep 7th 2020",
+          "italy": 310,
+          "germany": 140,
+          "uk": 210
+        }, {
+          "year": "Sep 13th 2020",
+          "italy": 50,
+          "germany": 100,
+          "uk": 200
+        }]
+      }
       // Create category axis
       let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
       categoryAxis.dataFields.category = "year";
@@ -264,7 +297,7 @@ interface Food {
       
     }
 
-    plotPieFirstChart() {
+    plotPieFirstChart(val) {
       /* Chart code */
 // Themes begin
 am4core.useTheme(am4themes_spirited);
@@ -275,29 +308,60 @@ am4core.useTheme(am4themes_animated);
 let chart = am4core.create("pieChartFirst", am4charts.PieChart);
 
 // Add data
-chart.data = [ {
-  "country": "Lithuania",
-  "litres": 501.9
-}, {
-  "country": "Czechia",
-  "litres": 301.9
-}, {
-  "country": "Ireland",
-  "litres": 201.1
-}, {
-  "country": "Germany",
-  "litres": 165.8
-}, {
-  "country": "Australia",
-  "litres": 139.9
-}, {
-  "country": "Austria",
-  "litres": 128.3
-}, {
-  "country": "UK",
-  "litres": 99
+if(val ==1){
+  chart.data = [ {
+    "country": "Lithuania",
+    "litres": 501.9
+  }, {
+    "country": "Czechia",
+    "litres": 301.9
+  }, {
+    "country": "Ireland",
+    "litres": 201.1
+  }, {
+    "country": "Germany",
+    "litres": 165.8
+  }, {
+    "country": "Australia",
+    "litres": 139.9
+  }, {
+    "country": "Austria",
+    "litres": 128.3
+  }, {
+    "country": "UK",
+    "litres": 99
+  }
+  ];
+}else if (val ==2){
+  chart.data = [ {
+    "country": "Lithuania",
+    "litres": 501.9
+  }, {
+    "country": "Czechia",
+    "litres": 301.9
+  },{
+    "country": "Ireland",
+    "litres": 201.1
+  }, {
+    "country": "Germany",
+    "litres": 165.8
+  },
+]
+}else if (val ==3){
+  chart.data = [  
+    {
+      "country": "Australia",
+      "litres": 139.9
+    },{
+    "country": "Austria",
+    "litres": 128.3
+  }, {
+    "country": "UK",
+    "litres": 99
+  }
+]
 }
-];
+
 
 // Add and configure Series
 let pieSeries = chart.series.push(new am4charts.PieSeries());
@@ -811,5 +875,25 @@ chart.exporting.menu.align = "left";
 chart.exporting.menu.verticalAlign = "top";
 
 }
-
+viewSelectedVal(val) {
+  console.log(val);
+  this.viewSelected = val;
+}
+changeValue(id){
+  this.plotLineChart(id.value);
+  this.plotPieFirstChart(id.value);
+  if(id.value == 1){
+    this.drawerItalyValue = '42,977'
+    this.drawerGermanyValue = '64,007'
+    this.drawerUkValue = '123,007'
+  }else if(id.value ==2){
+    this.drawerItalyValue = '1,000'
+    this.drawerGermanyValue = '23,007'
+    this.drawerUkValue = '11,007'
+  }else if(id.value ==3){
+    this.drawerItalyValue = '2,977'
+    this.drawerGermanyValue = '4,007'
+    this.drawerUkValue = '3,007'
+  }
+}
   }
