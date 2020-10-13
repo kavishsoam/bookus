@@ -1,4 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+div {
+  font-family: 'Poppins', sans-serif;
+}
 .border-out {
     border-width: 3px;
     border-style: solid;
@@ -95,11 +98,7 @@
   }
 
   .border-layout {
-    border-width: 1px;
-    border-style: dotted;
-    border-bottom: 0px;
-    border-top: 0px;
-    border-right: 0px;
+    border-left: 1px solid #ddd;
   }
 .row {
   display: flex;
@@ -127,7 +126,17 @@
   width: 32%;
   float: left;
 }
-
+.w-33 {
+  width: 33%;
+  float: left;
+}
+.w-30 {
+  width: 30%;
+  float: left;
+}
+.text-center {
+  text-align: center;
+}
 .w-80 {
   width: 80%;
   float: left;
@@ -138,11 +147,22 @@
 .mb-20 {
   margin-bottom: 20px;
 }
-.2w-50 {
-  width: 40%;
+.w-60.spl-margin-left {
+  margin-left: 10px;
+}
+.w-40.spl-margin-right {
+  margin: 0 10px 0 0;
+}
+.marketing-chart {
+  margin: 0 0 20px 0;
 }
 .section-piechart {
-  margin: 0 20px 20px 20px;
+  margin: 0 10px 20px 20px;
+  .heading {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+  }
 }
 .graph-legend {
   div {
@@ -154,22 +174,128 @@
 }
 .gender-section {
   margin: 0 20px 20px 20px;
+  .gender-detail {
+    height: 142px;
+    .gender-heading {
+      font-size: 18px;
+      margin: 0 0 20px 0;
+      font-weight: 600;
+    }
+    .gender-heading-small {
+      font-size: 12px;
+      color: #777;
+      margin: 10px 0;
+      display: block;
+    }
+    ul {
+      padding: 0;
+      margin-top: 0;
+      li {
+        float: left;
+        width: 50%;
+        list-style-type: none;
+        text-align: center;
+        span {
+          color: #6794dc;
+          font-weight: 600;
+        }
+      }
+    }
+    .gender-quantity {
+      margin: 0;
+      span {
+        position: relative;
+        &.left {
+          float: left;
+          color: #2356a6;
+          padding-left: 15px;
+          &::before {
+            position: absolute;
+            content: " ";
+            background: #2356a6;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            left: 0;
+            top: 3px;
+          }
+        }
+        &.right {
+          float: right;
+          color: #6794dc;
+          padding-right: 15px;
+          &::before {
+            position: absolute;
+            content: " ";
+            background: #2356a6;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            right: 0;
+            top: 3px;
+          }
+        }
+      }
+    }
+  }
 }
 .average-watch-time {
-  margin: 0 20px 20px 20px;
+  margin: 0 30px 20px 20px;
+  .heading {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+  }
+  .average-table {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: " ";
+      background: #ddd;
+      width: 1px;
+      height: 100%;
+      left: -7px;
+    }
+    table {
+      tr {
+        td, th {
+          padding: 0 0 0 5px !important;
+          text-align: left;
+        }
+      }
+    }
+    .table-show-more-btn {
+      width: 150px !important;
+    }
+  }
+}
+.border-bottom {
+  border-bottom: 1px solid #777;
+}
+.table-show-more-btn {
+  background: #6794dc;
+  color: #fff;
+}
+.spender-table {
+  .heading {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+  }
 }
 .symbol-table {
   min-height: 523px;
 }
 .sales-chart {
   margin: 0 20px 20px 20px;
+  height: 537px;
 }
 .marketing-chart {
   margin: 0 20px 20px 20px;
 }
-.border-right {
-  border-right: 1px solid #777;
-}
+// .border-right {
+//   border-right: 1px solid #777;
+// }
 .heading {
   width: 100%;
   margin: 0;
@@ -189,21 +315,31 @@
     padding-left: 0;
     li {
       list-style-type: none;
+      span {
+        width: 10%;
+        float: left;
+      }
+      app-progress-bar {
+        width: 90%;
+        float: left;
+      }
     }
   }
 }
 .rating-user-detail {
+  margin-bottom: 30px;
   h3 {
     font-size: 17px;
     font-weight: 400;
     span {
       float: right;
       button.sort-button {
-        padding: 3px 9px;
-        border: 1px solid #ccc;
+        padding: 6px 25px;
+        border: 1px solid #aba8a8;
         font-size: 15px;
         border-radius: 3px;
         cursor: pointer;
+        color: #797878;
       }
     }
   }
@@ -218,6 +354,7 @@
       height: 10px;
       border-radius: 50%;
       padding: 4px 9px;
+      color: #fff;
     }
   }
   .user-rating {
@@ -240,7 +377,7 @@
     width: 100%;
     text-decoration: none;
     text-align: center;
-    padding: 3px 0;
+    padding: 7px 0;
     border-radius: 2px;
   }
 }
@@ -249,14 +386,15 @@
 }
 .sort-btn {
   float: right;
-  padding: 3px 9px;
-  border: 1px solid #ccc;
+  padding: 6px 25px;
+  border: 1px solid #aba8a8;
   font-size: 15px;
   border-radius: 3px;
   cursor: pointer;
+  color: #797878;
 }
 .therapist-detail {
-  margin-top: 20px;
+  margin-top: 15px;
   border-bottom: 1px solid #999;
   padding: 8px 0;
 }
@@ -293,6 +431,51 @@
   width: 20%;
   float: left;
 }
+mat-card {
+  // padding: 0;
+  .cash-drawer-section {
+    .border-right {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: " ";
+        background: #999;
+        width: 1px;
+        height: 50px;
+        right: 0;
+        top: 0;
+      }
+    }
+    p {
+      margin: 0;
+      &.card-heading {
+        font-size: 18px;
+        margin: 0 0 20px 0;
+        font-weight: 600;
+      }
+      &.copy_demo {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.revenue-main-grid {
+  margin: 0 20px 20px 20px;
+  .border-right {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: " ";
+      background: #999;
+      width: 1px;
+      height: 80%;
+      top: 45px;
+      right: 0;
+    }
+  }
+}
+
 
 
 @media (max-width: 991px) {
@@ -320,13 +503,13 @@
 
 @media (max-width: 767px) {
   .row {
-    display: block;
+    display: block !important;
   }
   .w-60 {
-    width: 80%;
+    width: 100%;
   }
   .w-40 {
-    width: 85%;
+    width: 108%;
   }
   .w-32 {
     width: 80%;
@@ -334,11 +517,48 @@
   .w-50 {
     width: 97%;
   }
+  .w-100 {
+    width: 100%;
+    float: left;
+  }
+  .w-100 {
+    .w-33 {
+      width: 90%;
+    }
+  }
+  .revenue-main-grid .border-right::after {
+    width: 0;
+  }
+  .w-60.spl-margin-left {
+    margin-left: 0 !important;
+    width: 97%;
+  }
+  .mw-50 {
+    width: 108% !important;
+  }
+  .mw-20 {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  .mw-80 {
+    display: block;
+    float: none;
+    width: 90%;
+    margin-left: 10px;
+  }
+  .mw-40 {
+    width: 108%;
+  }
+  .w-32 {
+    width: 100%;
+  }
+  .revenue-main-grid {
+    margin-left: 0;
+  }
   .sales-chart {
     margin: 0 0 20px 0;
-  }
-  .marketing-chart {
-    margin: 0 0 20px 0;
+    height: auto;
   }
   .section-piechart {
     margin: 0 0 20px 0;
@@ -350,8 +570,11 @@
     font-size: 12px;
   }
   .average-watch-time {
-    width: 80%;
+    width: 95%;
     margin: 0 0 20px 0;
+  }
+  .marketing-chart {
+    
   }
   table {
     width: 100%;
@@ -360,5 +583,12 @@
         padding: 0;
       }
     }
+  }
+  .marketing-chart {
+    margin-left: 0;
+    margin-right: 0 !important;
+  }
+  mat-card .cash-drawer-section p {
+    font-size: 14px !important;
   }
 }

@@ -75,6 +75,46 @@ interface Food {
         {title:'New', value:'269', percentage:'33%'}
       ]
     }
+    data1 = {
+      title:'',
+      subTitle:'',
+      data:[
+        {title:'Retured', value:'549', percentage:'100%'},
+        {title:'New', value:'269', percentage:'0%'}
+      ]
+    }
+    data2 = {
+      title:'',
+      subTitle:'',
+      data:[
+        {title:'Retured', value:'549', percentage:'77%'},
+        {title:'New', value:'269', percentage:'0'}
+      ]
+    }
+    data3 = {
+      title:'',
+      subTitle:'',
+      data:[
+        {title:'Retured', value:'549', percentage:'50%'},
+        {title:'New', value:'269', percentage:'0'}
+      ]
+    }
+    data4 = {
+      title:'',
+      subTitle:'',
+      data:[
+        {title:'Retured', value:'549', percentage:'25%'},
+        {title:'New', value:'269', percentage:'0'}
+      ]
+    }
+    data5 = {
+      title:'',
+      subTitle:'',
+      data:[
+        {title:'Retured', value:'549', percentage:'5%'},
+        {title:'New', value:'269', percentage:'0'}
+      ]
+    }
 
     newData= {
       title:'New-Sales',
@@ -104,6 +144,10 @@ interface Food {
     piechart6= {
       title:'Profits',
       chartId: 'piechart6'
+    }
+    piechart7= {
+      title:'Cost',
+      chartId: 'piechart7'
     }
     constructor() {}
     toppings = new FormControl();

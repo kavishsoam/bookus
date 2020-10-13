@@ -1,12 +1,14 @@
 <div class="main">
-  <mat-card>
-    <div fxLayout="column">
-        <div fxFlex="10">
-            <p>{{pie.title}}</p>
+<div class="revenue-card">
+    <mat-card>
+        <div fxLayout="column">
+            <div fxFlex="10">
+                <p class="heading">{{pie.title}}</p>
+            </div>
+            <div fxFlex="90">
+                <div class="pie-Chart"[id]="pie.chartId"></div>
+            </div>
         </div>
-        <div fxFlex="90">
-            <div class="pie-Chart"[id]="pie.chartId"></div>
-        </div>
-    </div>
-</mat-card>
+    </mat-card>
+</div>
 </div>

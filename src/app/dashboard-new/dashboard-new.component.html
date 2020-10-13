@@ -1,4 +1,6 @@
+
 <ng-container #fullPage>
+    <div class="main-section">
     <!-- <ng-container #firstRow> -->
         <div fxLayout="column" fxLayoutAlign="space-around none" style="width:100%">
     <div>
@@ -77,9 +79,9 @@
             </div>
             <div class="w-20 mb-20" class="border-out">
                 <mat-card>
-                    <div fxLayout="column" fxLayoutAlign="space-around none" >
+                    <div fxLayout="column" fxLayoutAlign="space-around none" class="cash-drawer-section" >
                         <div fxFlex="10">
-                            <p>Current Cash In Drawer</p>
+                            <p class="card-heading">Current Cash In Drawer</p>
                         </div>
                         <div fxFlex="90">
                             <div fxLayout="row" fxLayoutAlign="space-around none">
@@ -106,83 +108,77 @@
     </div>
     <div >
         <div class="row" style="width: 100%;">
-            <div class="border-out w-32 section-piechart">
-                <!-- <mat-card>
-                    <div fxLayout="row" fxLayoutAlign="space-around none">
-                        <div fxFlex="80">
-                            <div id="pieChartFirst1"></div>
-                        </div>
-                        <div fxFlex="20">
-                            <div fxLayout="column" fxLayoutAlign="space-around none">
-                                <div fxFlex="33">
-                                    <p class="new_demo1">Services</p>
-                                    <p class="new_demo">$60.56</p>
+            <div class="w-100 border-out revenue-main-grid">
+                <div class="outer-section">
+                    <div class="w-33 border-right">
+                        <!-- <mat-card>
+                            <div fxLayout="row" fxLayoutAlign="space-around none">
+                                <div fxFlex="80">
+                                    <div id="pieChartFirst1"></div>
                                 </div>
-                                <div fxFlex="33">
-                                    <p class="new_demo1">Products</p>
-                                    <p class="new_demo">$43.88</p>
-                                </div>
-                                <div fxFlex="33">
-                                    <p class="new_demo1">Vouchers</p>
-                                    <p class="new_demo">$8.99</p>
+                                <div fxFlex="20">
+                                    <div fxLayout="column" fxLayoutAlign="space-around none">
+                                        <div fxFlex="33">
+                                            <p class="new_demo1">Services</p>
+                                            <p class="new_demo">$60.56</p>
+                                        </div>
+                                        <div fxFlex="33">
+                                            <p class="new_demo1">Products</p>
+                                            <p class="new_demo">$43.88</p>
+                                        </div>
+                                        <div fxFlex="33">
+                                            <p class="new_demo1">Vouchers</p>
+                                            <p class="new_demo">$8.99</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            
+                        </mat-card> -->
+                        <app-pie-chart [pie]="piechart2"></app-pie-chart>
                     </div>
+                    <div class="w-33 border-right">
+                        <!-- <mat-card>
+                            <div fxLayout="column" fxLayoutAlign="space-around none">
+                                <div fxFlex="10">
+                                    <p>Service</p>
+                                </div>
+                                <div fxFlex="90">
+                                    <div id="pieChartFirst2"></div>
+                                </div>
+                            </div>
+                        </mat-card> -->
+                        <app-pie-chart [pie]="piechart3"></app-pie-chart>
+                    </div>
+                    <div class="w-33">
+                        <!-- <mat-card>
+                            <div fxLayout="column" fxLayoutAlign="space-around none">
+                                <div fxFlex="10">
+                                    <p>Products</p>
+                                </div>
+                                <div fxFlex="90">
+                                    <div id="pieChartFirst3"></div>
+                                </div>
+                            </div>
+                        </mat-card> -->
+                        <app-pie-chart [pie]="piechart4"></app-pie-chart>
                     
-                </mat-card> -->
-                <app-pie-chart [pie]="piechart2"></app-pie-chart>
-            </div>
-            <div class="border-out w-32 section-piechart">
-                <!-- <mat-card>
-                    <div fxLayout="column" fxLayoutAlign="space-around none">
-                        <div fxFlex="10">
-                            <p>Service</p>
-                        </div>
-                        <div fxFlex="90">
-                            <div id="pieChartFirst2"></div>
-                        </div>
                     </div>
-                </mat-card> -->
-                <app-pie-chart [pie]="piechart3"></app-pie-chart>
-            </div>
-            <div class="border-out w-32 section-piechart">
-                <!-- <mat-card>
-                    <div fxLayout="column" fxLayoutAlign="space-around none">
-                        <div fxFlex="10">
-                            <p>Products</p>
-                        </div>
-                        <div fxFlex="90">
-                            <div id="pieChartFirst3"></div>
-                        </div>
-                    </div>
-                </mat-card> -->
-                <app-pie-chart [pie]="piechart4"></app-pie-chart>
-            
+                </div>
             </div>
         </div>
     </div>
     <div >
         <div class="row"  style="width: 100%;">
-            <div class="w-60">
+            <div class="w-60 spl-margin-left">
                 <div class="row">
+                    
                     <div class="w-50 gender-section 2w-50">
                         <!-- <div fxLayout="column" fxLayoutAlign="space-around none"> -->
-                            <div class="" class="w-100 border-out">
-                                <mat-card>
-                                    <div fxLayout="column" fxLayoutAlign="space-around none">
-                                        <div fxFlex="15">
-                                            <span class="mobile-size">Customer Gender</span>
-                                        </div>
-                                        <div fxFlex="10">
-                                            <span class="mobile-size">As of Month selected</span>
-                                        </div>
-                                        <div fxFlex="75">
-                                            <app-progress-bar [progressData]="gender"></app-progress-bar>
-                                        </div>
-                                    </div>
-                                </mat-card>
+                            <div class="border-out w-100">
+                            <app-pie-chart [pie]="piechart7"></app-pie-chart>
                             </div>
+                            
                             <div class="border-out w-100">
                                 <!-- <mat-card>
                                     <div fxLayout="column" fxLayoutAlign="space-around none">
@@ -199,20 +195,50 @@
                             </div>
                         <!-- </div> -->
                     </div>
-                    <div class="w-50 gender-section">
+                    <div class="w-50 gender-section mw-50">
                         <!-- <div fxLayout="column" fxLayoutAlign="space-around none"> -->
+                            <div class="" class="w-90 border-out">
+                                <mat-card>
+                                    <div class="gender-detail">
+                                        <div fxLayout="column" fxLayoutAlign="space-around none">
+                                            <div fxFlex="15">
+                                                <span class="mobile-size gender-heading">Customer Gender</span>
+                                            </div>
+                                            <div fxFlex="10">
+                                                <span class="mobile-size gender-heading-small">As of Month selected</span>
+                                            </div>
+                                            <div fxFlex="75">
+                                                <p class="gender-quantity"><span class="left">77% Male</span> <span class="right">47% Female</span></p>
+                                                <app-progress-bar [progressData]="gender"></app-progress-bar>
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li><span>278</span> <br> Male</li>
+                                            <li><span>246</span> <br> Female</li>
+                                        </ul>
+                                    </div>
+                                </mat-card>
+                            </div>
                             <div class="border-out w-90">
                                 <mat-card>
-                                    <div fxLayout="column" fxLayoutAlign="space-around none">
-                                        <div fxFlex="15">
-                                            <span class="mobile-size">New v/s Return</span>
+                                    <div class="gender-detail">
+                                        <div fxLayout="column" fxLayoutAlign="space-around none">
+                                            <div fxFlex="15">
+                                                <span class="mobile-size gender-heading">New v/s Return</span>
+                                            </div>
+                                            <div fxFlex="10">
+                                                <span class="mobile-size gender-heading-small">As of Month selected</span>
+                                            </div>
+                                            <div fxFlex="75">
+                                                <p class="gender-quantity"><span class="left">77% Old</span> <span class="right">47% New</span></p>
+                                                <app-progress-bar [progressData]="customer"></app-progress-bar>
+                                            </div>
                                         </div>
-                                        <div fxFlex="10">
-                                            <span class="mobile-size">As of Month selected</span>
-                                        </div>
-                                        <div fxFlex="75">
-                                            <app-progress-bar [progressData]="customer"></app-progress-bar>
-                                        </div>
+
+                                        <ul>
+                                            <li><span>549</span> <br> Removed</li>
+                                            <li><span>269</span> <br> New</li>
+                                        </ul>
                                     </div>
                                 </mat-card>
                             </div>
@@ -234,9 +260,10 @@
                     </div>
                 </div>
             </div>
-            <div class="w-40">
-                <div fxLayout="row" class="border-out symbol-table">
+            <div class="w-40 mw-40 spl-margin-right">
+                <div fxLayout="row" class="border-out symbol-table spender-table">
                     <mat-card>
+                        <p class="heading">Top Spender Customer</p>
                         <div class="mat-elevation-z0">
                             <table mat-table [dataSource]="dataSource" style="width: 100%;">
                           
@@ -268,10 +295,10 @@
                               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                             </table>
                           
-                            <mat-paginator [pageSizeOptions]="[6, 10, 20]" showFirstLastButtons></mat-paginator>
+                            <mat-paginator [pageSizeOptions]="[11, 20]" showFirstLastButtons></mat-paginator>
                           </div>
                           <div style="width: 100%;">
-                            <button mat-raised-button type="button" color="primary" style="width: 100%;">Show More</button>
+                            <button mat-raised-button type="button"  class="table-show-more-btn" style="width: 100%;">Show More</button>
                           </div>
                     </mat-card>
                 </div>
@@ -283,14 +310,14 @@
             <div class="border-out w-50 average-watch-time">
                 <mat-card>
                     <div fxLayout="column" fxLayoutAlign="space-around none">
-                        <div fxFlex="10" class="mb-20">Average Waited Time </div>
+                        <div fxFlex="10" class="mb-20"><p class="heading">Average Waited Time </p></div>
                         <div fxFlex="90">
-                            <div class="graph-legend" fxLayout="row" fxLayoutAlign="space-around center">
-                                <div class="w-20">
+                            <div class="row graph-legend" fxLayout="" fxLayoutAlign="space-around center">
+                                <div class="w-20 mw-20">
                                     <p class="diff_demo">16 mins</p>
                                     <span class="copy_demo1">Average Waiting Time</span>
                                 </div>
-                                <div fxFlex="80" class="border-layout">
+                                <div class="w-80 mw-80 average-table">
                                     <!-- <mat-card> -->
                                         <div class="mat-elevation-z0">
                                             <table mat-table [dataSource]="dataSource" style="width: 100%;">
@@ -325,8 +352,8 @@
                                           
                                             <mat-paginator [pageSizeOptions]="[4, 10, 20]" showFirstLastButtons></mat-paginator>
                                           </div>
-                                          <div style="width: 100%;">
-                                            <button mat-raised-button type="button" color="primary" style="width: 100%;">Show More</button>
+                                          <div style="width: 100%;"  class="text-center">
+                                            <button mat-raised-button type="button" class="table-show-more-btn" style="width: 100%;">Show More</button>
                                           </div>
                                     <!-- </mat-card> -->
                                 </div>
@@ -338,29 +365,29 @@
             <div class="border-out w-50 average-watch-time">
                 <mat-card>
                     <div fxLayout="column" fxLayoutAlign="space-around none">
-                        <div fxFlex="10" class="mb-20"> Appointment Logs </div>
+                        <div fxFlex="10" class="mb-20"> <p class="heading">Appointment Logs </p></div>
                         <div fxFlex="90">
-                            <div fxLayout="row" fxLayoutAlign="space-around center">
-                                <div class="w-20">
+                            <div class="row" fxLayoutAlign="space-around center">
+                                <div class="w-20 mw-20">
                                     <div class="graph-legend" fxLayout="column" fxLayoutAlign="space-around none">
                                         <div fxFlex="30">
                                             <p class="diff_demo">27</p>
-                                            <span class="copy_demo1">No Show</span>
+                                            <span class="copy_demo1 border-bottom">No Show</span>
                                         </div>
                                         <div fxFlex="30">
                                             <p class="diff_demo">17</p>
-                                            <span class='copy_demo1'>Cancelled</span>
+                                            <span class="copy_demo1 border-bottom">Cancelled</span>
                                         </div>
                                         <div fxFlex="30">
                                             <p class="diff_demo">25</p>
-                                            <span class="copy_demo1">Late</span>
+                                            <span class="copy_demo1 border-bottom">Late</span>
                                         </div>
                                     </div>
                                    
                                 </div>
-                                <div class="w-80" class="border-layout">
+                                <div class="w-80 mw-80 average-table">
                                     <!-- <mat-card> -->
-                                        <div class="mat-elevation-z0">
+                                        <div class="mat-elevation-z0 average-table">
                                             <table mat-table [dataSource]="dataSource" style="width: 100%;">
                                           
                                               <!-- Position Column -->
@@ -393,8 +420,8 @@
                                           
                                             <mat-paginator [pageSizeOptions]="[4, 10, 20]" showFirstLastButtons></mat-paginator>
                                           </div>
-                                          <div style="width: 100%;">
-                                            <button mat-raised-button type="button" color="primary" style="width: 100%;">Show More</button>
+                                          <div style="width: 100%;" class="text-center">
+                                            <button mat-raised-button type="button"  class="table-show-more-btn" style="width: 100%;">Show More</button>
                                           </div>
                                     <!-- </mat-card> -->
                                 </div>
@@ -423,11 +450,11 @@
                         <div class="w-60">
                             <div class="ratin-detail">
                                 <ul>
-                                    <li><span>5</span></li>
-                                    <li><span>4</span></li>
-                                    <li><span>3</span></li>
-                                    <li><span>2</span></li>
-                                    <li><span>1</span></li>
+                                    <li><span>5</span> <app-progress-bar [progressData]="data1"></app-progress-bar> </li>
+                                    <li><span>4</span> <app-progress-bar [progressData]="data2"></app-progress-bar> </li>
+                                    <li><span>3</span> <app-progress-bar [progressData]="data3"></app-progress-bar> </li>
+                                    <li><span>2</span> <app-progress-bar [progressData]="data4"></app-progress-bar> </li>
+                                    <li><span>1</span> <app-progress-bar [progressData]="data5"></app-progress-bar> </li>
                                 </ul>
                             </div>
                         </div>
@@ -435,6 +462,28 @@
 
                     <div class="rating-user-detail">
                         <h3>Services Review <span><button type="button" class="sort-button">Sort</button></span></h3>
+                        <h4><span class="user-char">J</span> Joshua Ramirez</h4>
+                        <div class="user-rating"><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></div>
+                        <p>Best message i've had, second visit and plan on coming back or more.</p>
+                    </div>
+                    <div class="rating-user-detail">
+                        <h4><span class="user-char">J</span> Joshua Ramirez</h4>
+                        <div class="user-rating"><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></div>
+                        <p>Best message i've had, second visit and plan on coming back or more.</p>
+                    </div>
+
+                    <div class="rating-user-detail">
+                        <h4><span class="user-char">J</span> Joshua Ramirez</h4>
+                        <div class="user-rating"><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></div>
+                        <p>Best message i've had, second visit and plan on coming back or more.</p>
+                    </div>
+
+                    <div class="rating-user-detail">
+                        <h4><span class="user-char">J</span> Joshua Ramirez</h4>
+                        <div class="user-rating"><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></div>
+                        <p>Best message i've had, second visit and plan on coming back or more.</p>
+                    </div>
+                    <div class="rating-user-detail">
                         <h4><span class="user-char">J</span> Joshua Ramirez</h4>
                         <div class="user-rating"><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></div>
                         <p>Best message i've had, second visit and plan on coming back or more.</p>
@@ -447,7 +496,7 @@
                 </mat-card>
                 <!-- <app-pie-chart [pie]="piechart2"></app-pie-chart> -->
             </div>
-            <div class="border-out w-32 section-piechart">
+            <div class="border-out w-32 section-piechart top">
                 <mat-card>
                     <h2 class="heading">Top Therapists <span><button type="button" class="sort-btn">Sort</button></span></h2>
                     <div fxLayout="column" fxLayoutAlign="space-around none" class="therapist-detail">
@@ -465,6 +514,97 @@
                             </div>
                         </div>
                     </div>
+                    <div fxLayout="column" fxLayoutAlign="space-around none" class="therapist-detail">
+                        <div class="w-100">
+                            <div class="therapist-img">
+                                <img src="assets/user-profile.png">
+                            </div>
+                            <div class="therapist-name">
+                                <p>Eilynn</p>
+                                <h3><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></h3>
+                                <h4>278 reviews</h4>
+                            </div>
+                            <div class="therapist-award">
+                                <img src="assets/medal.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="space-around none" class="therapist-detail">
+                        <div class="w-100">
+                            <div class="therapist-img">
+                                <img src="assets/user-profile.png">
+                            </div>
+                            <div class="therapist-name">
+                                <p>Eilynn</p>
+                                <h3><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></h3>
+                                <h4>278 reviews</h4>
+                            </div>
+                            <div class="therapist-award">
+                                <img src="assets/medal.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="space-around none" class="therapist-detail">
+                        <div class="w-100">
+                            <div class="therapist-img">
+                                <img src="assets/user-profile.png">
+                            </div>
+                            <div class="therapist-name">
+                                <p>Eilynn</p>
+                                <h3><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></h3>
+                                <h4>278 reviews</h4>
+                            </div>
+                            <div class="therapist-award">
+                                <img src="assets/medal.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="space-around none" class="therapist-detail">
+                        <div class="w-100">
+                            <div class="therapist-img">
+                                <img src="assets/user-profile.png">
+                            </div>
+                            <div class="therapist-name">
+                                <p>Eilynn</p>
+                                <h3><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></h3>
+                                <h4>278 reviews</h4>
+                            </div>
+                            <div class="therapist-award">
+                                <img src="assets/medal.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="space-around none" class="therapist-detail">
+                        <div class="w-100">
+                            <div class="therapist-img">
+                                <img src="assets/user-profile.png">
+                            </div>
+                            <div class="therapist-name">
+                                <p>Eilynn</p>
+                                <h3><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></h3>
+                                <h4>278 reviews</h4>
+                            </div>
+                            <div class="therapist-award">
+                                <img src="assets/medal.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="space-around none" class="therapist-detail">
+                        <div class="w-100">
+                            <div class="therapist-img">
+                                <img src="assets/user-profile.png">
+                            </div>
+                            <div class="therapist-name">
+                                <p>Eilynn</p>
+                                <h3><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></h3>
+                                <h4>278 reviews</h4>
+                            </div>
+                            <div class="therapist-award">
+                                <img src="assets/medal.png">
+                            </div>
+                        </div>
+                    </div>
+
                     <div fxLayout="column" fxLayoutAlign="space-around none" class="therapist-detail">
                         <div class="w-100">
                             <div class="therapist-img">
@@ -516,11 +656,11 @@
                         <div class="w-60">
                             <div class="ratin-detail">
                                 <ul>
-                                    <li><span>5</span></li>
-                                    <li><span>4</span></li>
-                                    <li><span>3</span></li>
-                                    <li><span>2</span></li>
-                                    <li><span>1</span></li>
+                                    <li><span>5</span> <app-progress-bar [progressData]="data1"></app-progress-bar> </li>
+                                    <li><span>4</span><app-progress-bar [progressData]="data2"></app-progress-bar> </li>
+                                    <li><span>3</span><app-progress-bar [progressData]="data3"></app-progress-bar> </li>
+                                    <li><span>2</span><app-progress-bar [progressData]="data4"></app-progress-bar> </li>
+                                    <li><span>1</span><app-progress-bar [progressData]="data5"></app-progress-bar> </li>
                                 </ul>
                             </div>
                         </div>
@@ -528,6 +668,30 @@
 
                     <div class="rating-user-detail">
                         <h3>Therapists Review <span><button type="button" class="sort-button">Sort</button></span></h3>
+                        <h4><span class="user-char">J</span> Joshua Ramirez</h4>
+                        <div class="user-rating"><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></div>
+                        <p>Best message i've had, second visit and plan on coming back or more.</p>
+                    </div>
+
+                    <div class="rating-user-detail">
+                        <h4><span class="user-char">J</span> Joshua Ramirez</h4>
+                        <div class="user-rating"><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></div>
+                        <p>Best message i've had, second visit and plan on coming back or more.</p>
+                    </div>
+
+                    <div class="rating-user-detail">
+                        <h4><span class="user-char">J</span> Joshua Ramirez</h4>
+                        <div class="user-rating"><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></div>
+                        <p>Best message i've had, second visit and plan on coming back or more.</p>
+                    </div>
+
+                    <div class="rating-user-detail">
+                        <h4><span class="user-char">J</span> Joshua Ramirez</h4>
+                        <div class="user-rating"><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></div>
+                        <p>Best message i've had, second visit and plan on coming back or more.</p>
+                    </div>
+
+                    <div class="rating-user-detail">
                         <h4><span class="user-char">J</span> Joshua Ramirez</h4>
                         <div class="user-rating"><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span><span class="material-icons">grade</span></div>
                         <p>Best message i've had, second visit and plan on coming back or more.</p>
@@ -563,4 +727,5 @@
     <ng-container #fifthRow>
 
     </ng-container>
+</div>
 </ng-container>

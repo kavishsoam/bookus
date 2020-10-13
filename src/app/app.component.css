@@ -1,3 +1,8 @@
 .main {height:100vh;}
 .leftPanel {background-color:#2d323e;color: #FFF;transition: all 0.5s ease;}
-.mainPanel {background-color:#FFF;padding:15px;overflow: auto;transition: all 0.5s ease;display: flex;}
+.mainPanel {background-color:#FFF;padding:15px;overflow: auto;transition: all 0.5s ease; width: 97%;}
+@media (max-width: 767px) {
+    .mainPanel {
+        width: 90%;
+    }
+}

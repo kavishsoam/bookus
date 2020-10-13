@@ -3,3 +3,14 @@
     width: 100%;
     height: 300px;
 }
+mat-card {
+    box-shadow: none !important;
+}
+.revenue-card {
+    margin-right: 20px;
+}
+.revenue-card .heading {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}

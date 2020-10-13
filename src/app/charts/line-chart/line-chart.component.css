@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 .line-chart {
     font-size: 10px;
     width: 100%;
-    height: 400px;
+    height: 370px;
     border: 2px solid #ddd;
 }
 /* .line-chart mat-card {
@@ -11,7 +12,11 @@
     width: 25%;
 }
 .mat-card {
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    box-shadow: none;
+}
+h2 span {
+    font-family: 'Poppins', sans-serif;
 }
 @media (max-width: 767px) {
     .w-25 {
