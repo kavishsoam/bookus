@@ -1,0 +1,14 @@
+.text-right {
+    text-align: end;
+}
+.table-show-more-btn {
+    width: 150px !important;
+    background: #0c0c50;
+    color: white;
+}
+.header-title {
+    background: #7b6c6c14;
+    color: #80808094;
+    font-size: 17px;
+    font-weight: 500;
+}

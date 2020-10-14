@@ -9,6 +9,10 @@ const routes: Routes = [
     path: "dashboard",
     loadChildren: "./dashboard-new/dashboard-new.module#DashboardNewModule",
   },
+  {
+    path: "table",
+    loadChildren: "./table/table.module#TableModule",
+  },
 ];
 
 @NgModule({

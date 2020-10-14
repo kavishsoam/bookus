@@ -10,6 +10,8 @@ import { LeftPanelComponent } from './_layout/left-panel/left-panel.component';
 import { HomeComponent } from './_module/home/home.component';
 import { SalesComponent } from './_module/home/sales/sales.component';
 import { LineChartComponent } from './_graph/line-chart/line-chart.component';
+import { TableComponent } from './table/table.component';
+import { ModalComponent } from './shared-component/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { LineChartComponent } from './_graph/line-chart/line-chart.component';
     LeftPanelComponent,
     HomeComponent,
     SalesComponent,
-    LineChartComponent
+    LineChartComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

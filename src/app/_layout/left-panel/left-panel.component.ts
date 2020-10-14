@@ -13,14 +13,15 @@ export class LeftPanelComponent implements OnInit {
   isExpanded:boolean = true;
 
   navs = [
-    {title:'Home', icon:'home'},
-    {title:'Calendar', icon:'calendar_today'},
-    {title:'Sales', icon:'attach_money'},
-    {title:'Client', icon:'home_repair_service'},
-    {title:'Staff', icon:'event_seat'},
-    {title:'Services', icon:'brightness_7'},
-    {title:'Analytiics', icon:'bar_chart'},
-    {title:'Setup', icon:'api'},
+    {title:'Home', icon:'home', path:'javascript:;'},
+    {title:'Table', icon:'home', path:'/table'},
+    {title:'Calendar', icon:'calendar_today',path:'javascript:;'},
+    {title:'Sales', icon:'attach_money', path:'javascript:;'},
+    {title:'Client', icon:'home_repair_service', path:'javascript:;'},
+    {title:'Staff', icon:'event_seat', path:'javascript:;'},
+    {title:'Services', icon:'brightness_7', path:'javascript:;'},
+    {title:'Analytiics', icon:'bar_chart', path:'javascript:;'},
+    {title:'Setup', icon:'api', path:'javascript:;'},
   ]
 
   constructor() { }

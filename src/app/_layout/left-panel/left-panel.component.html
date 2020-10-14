@@ -9,7 +9,9 @@
 </header>
 <mat-list>
   <mat-list-item *ngFor="let nav of navs">
-    <mat-icon mat-list-icon>{{nav.icon}}</mat-icon>
-    <h4 mat-line *ngIf="isExpanded">{{nav.title}}</h4>
+    <!-- <a class="" [routerLink]="nav.path"> -->
+      <mat-icon mat-list-icon>{{nav.icon}}</mat-icon>
+      <h4 mat-line *ngIf="isExpanded">{{nav.title}}</h4>
+    <!-- </a> -->
   </mat-list-item>
 </mat-list>
