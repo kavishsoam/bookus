@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatMenuModule, MatSidenavModule,MatIconModule,MatListModule,MatCardModule,MatFormFieldModule, MatInputModule, MatSelectModule, MatOptionModule } from '@angular/material';
+import { MatButtonModule, MatMenuModule, MatSidenavModule,MatIconModule,MatListModule,MatCardModule,MatFormFieldModule, MatInputModule, MatSelectModule, MatOptionModule, MatSlideToggleModule, MatButtonToggleModule, MatSliderModule } from '@angular/material';
 import { MatDatepickerModule,MatNativeDateModule } from '@angular/material'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { SalesComponent } from './_module/home/sales/sales.component';
 import { LineChartComponent } from './_graph/line-chart/line-chart.component';
 import { TableComponent } from './table/table.component';
 import { ModalComponent } from './shared-component/modal/modal.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ModalComponent } from './shared-component/modal/modal.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatButtonModule,
@@ -38,9 +40,13 @@ import { ModalComponent } from './shared-component/modal/modal.component';
     MatSelectModule,
     MatOptionModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSlideToggleModule,
+    MatButtonToggleModule,
+    MatSliderModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalComponent],
 })
 export class AppModule { }

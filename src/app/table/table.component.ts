@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource, MatDialog } from '@angular/material';
+import { ModalComponent } from '../shared-component/modal/modal.component';
 
 
 
@@ -31,9 +32,31 @@ export class TableComponent implements OnInit {
 
   displayedColumns: string[] = ['name', 'dateAdded', 'status'];
     dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  constructor() { }
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open(ModalComponent, {
+      width: '450px',
+      data: {newData : 'data'}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed', result);
+      if (result.type == 'save') {
+        let obj = {
+          name: result.name,
+          dateAdded: 'Monday, 1 Sep 2020',
+          status: result.status
+        }
+        ELEMENT_DATA.push(obj);
+        this.dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+      }
+
+    });
+
+  }
 }

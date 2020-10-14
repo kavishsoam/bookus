@@ -1,3 +1,25 @@
-<p>
-  modal works!
-</p>
+
+<div class="header-div">
+  <span class="title">
+    <p mat-dialog-title>New Referral Source</p>
+  </span>
+  <span class="close-icon">
+      <mat-icon class="close-icon" color="black" (click)="onNoClick()">close</mat-icon>
+  </span>
+  
+</div>
+<div mat-dialog-content class="content">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput type="text" maxlength="10"  [(ngModel)]="name" (change)="onChange($event)" required>
+  </mat-form-field>
+
+  <mat-slide-toggle class="example-margin"  [checked]="checked" color="primary"
+    (change)="onCheckChange($event)">
+    {{state}}
+  </mat-slide-toggle>
+</div>
+<div mat-dialog-actions class="action">
+  <button mat-button (click)="onNoClick()" class="cancel">Cancel</button>
+  <button mat-button (click)="save()" class="save">Save</button>
+</div>

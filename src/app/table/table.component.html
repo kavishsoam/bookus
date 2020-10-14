@@ -1,7 +1,7 @@
 <div>
 
   <div style="width: 100%;"  class="text-right">
-    <button mat-raised-button type="button" class="table-show-more-btn" style="width: 100%;">Show More</button>
+    <button mat-raised-button type="button" class="table-show-more-btn" style="width: 100%;" (click)="openDialog()">New Referral Source</button>
   </div> 
 
   <table mat-table class="hover" [dataSource]="dataSource" style="width: 100%;">
@@ -24,7 +24,7 @@
     <!-- Symbol Column -->
     <ng-container matColumnDef="status">
       <th mat-header-cell *matHeaderCellDef class="header-title"> Status </th>
-      <td mat-cell *matCellDef="let element">  <span class="status-tag">{{element.status}}</span> </td>
+      <td mat-cell *matCellDef="let element">  <span [class]="element.status == 'Active'? 'status-tag' : 'status-not-tag'">{{element.status}}</span> </td>
     </ng-container>
 
   </table>

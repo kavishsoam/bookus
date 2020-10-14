@@ -12,3 +12,22 @@
     font-size: 17px;
     font-weight: 500;
 }
+.status-tag {
+    background: #88e5be;
+    color: #fff;
+    padding: 3px 20px;
+    border-radius: 5px;
+}
+.status-not-tag{
+    background: orange;
+    color: #fff;
+    padding: 3px 20px;
+    border-radius: 5px;
+}
+table {
+    margin-top: 20px;
+}
+table tr th {
+    text-transform: uppercase;
+    font-size: 15px;
+}
