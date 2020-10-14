@@ -11,7 +11,7 @@ import { HomeComponent } from './_module/home/home.component';
 import { SalesComponent } from './_module/home/sales/sales.component';
 import { LineChartComponent } from './_graph/line-chart/line-chart.component';
 import { TableComponent } from './table/table.component';
-import { ModalComponent } from './shared-component/modal/modal.component';
+
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -21,7 +21,6 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     SalesComponent,
     LineChartComponent,
-    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +46,6 @@ import { FormsModule } from '@angular/forms';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ModalComponent],
+  entryComponents: [],
 })
 export class AppModule { }

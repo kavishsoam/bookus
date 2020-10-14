@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { ProgressBarComponent } from "./progress-bar.component";
@@ -24,6 +24,8 @@ import { MatDialogModule, MatSlideToggleModule,MatFormFieldModule, MatInputModul
         ProgressBarComponent,
         ModalComponent
     ],
+    entryComponents:[ModalComponent],
+    schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class ProgressBarModule {}

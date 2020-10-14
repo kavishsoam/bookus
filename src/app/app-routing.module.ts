@@ -5,6 +5,7 @@ import { HomeComponent } from './_module/home/home.component'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+
     {
     path: "dashboard",
     loadChildren: "./dashboard-new/dashboard-new.module#DashboardNewModule",
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: "table",
     loadChildren: "./table/table.module#TableModule",
+  },
+  {
+    path: '**',
+    redirectTo: 'dashboard',
   },
 ];
 

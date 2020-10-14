@@ -13,7 +13,7 @@ export class LeftPanelComponent implements OnInit {
   isExpanded:boolean = true;
 
   navs = [
-    {title:'Home', icon:'home', path:'javascript:;'},
+    {title:'Home', icon:'home', path:'/dashboard'},
     {title:'Table', icon:'home', path:'/table'},
     {title:'Calendar', icon:'calendar_today',path:'javascript:;'},
     {title:'Sales', icon:'attach_money', path:'javascript:;'},
